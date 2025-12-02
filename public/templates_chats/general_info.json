@@ -1,0 +1,108 @@
+{
+    "device": "iphone15",
+    "theme": "whatsapp-dark",
+    "settings": {
+        "autoplaySpeed": 1.2,
+        "showAvatar": true,
+        "showTicks": false,
+        "borderColor": "#9333ea"
+    },
+    "conversation": [
+        {
+            "id": 1,
+            "sender": "user",
+            "text": "Hola, quiero más información?",
+            "timestamp": "2025-01-20 10:00"
+        },
+        {
+            "id": 2,
+            "sender": "vi",
+            "text": "¡Hola! 😊 Soy *Vi*, el agente de inteligencia artificial de VisaBot. Estoy aquí para ayudarte a adelantar tu cita de visa americana de forma segura y rápida. ¿En qué país tienes tu cita?",
+            "timestamp": "2025-01-20 10:01"
+        },
+        {
+            "id": 3,
+            "sender": "user",
+            "text": "Colombia. Mi cita quedó súper lejos… 2026 😩",
+            "timestamp": "2025-01-20 10:02"
+        },
+        {
+            "id": 4,
+            "sender": "vi",
+            "text": "Uf, sí, esas fechas son muy comunes. Pero tranquilo, para eso estoy yo 😊. Mi trabajo es monitorear *24/7* el portal oficial y detecto en segundos cualquier cancelación o cupo nuevo para adelantarla.",
+            "timestamp": "2025-01-20 10:03"
+        },
+        {
+            "id": 5,
+            "sender": "user",
+            "text": "¿Y eso funciona? He visto mucha gente que dice que no hay citas.",
+            "timestamp": "2025-01-20 10:03"
+        },
+        {
+            "id": 6,
+            "sender": "vi",
+            "text": "Sí funciona. VisaBot tiene *98% de efectividad* y ya hemos adelantado más de *2.500 citas* solo en Colombia. Yo no fuerzo nada: simplemente detecto espacios reales cuando el sistema los libera.",
+            "timestamp": "2025-01-20 10:04"
+        },
+        {
+            "id": 7,
+            "sender": "user",
+            "text": "¿Y cuánto cuesta?",
+            "timestamp": "2025-01-20 10:04"
+        },
+        {
+            "id": 8,
+            "sender": "vi",
+            "text": "El servicio *no tiene pago anticipado*. Solo pagas cuando logremos adelantar tu cita. El costo es *COP $600 por cada día adelantado*. Si te adelantamos 200 días, por ejemplo, serían $120.000.",
+            "timestamp": "2025-01-20 10:05"
+        },
+        {
+            "id": 9,
+            "sender": "user",
+            "text": "¿Y si viajo con mi hijo también?",
+            "timestamp": "2025-01-20 10:06"
+        },
+        {
+            "id": 10,
+            "sender": "vi",
+            "text": "En ese caso, cada acompañante adicional tiene un costo de *COP $300 por día adelantado*. Así todos mantienen la misma fecha y hora de cita 🙂",
+            "timestamp": "2025-01-20 10:06"
+        },
+        {
+            "id": 11,
+            "sender": "user",
+            "text": "¿Y es seguro? He escuchado que usar bots puede bloquear la cuenta.",
+            "timestamp": "2025-01-20 10:07"
+        },
+        {
+            "id": 12,
+            "sender": "vi",
+            "text": "Es totalmente seguro. Yo *no* hackeo nada ni hago acciones prohibidas. Solo verifico disponibilidad como lo hace cualquier persona, pero de forma constante y sin errores. Tu cuenta nunca se pone en riesgo.",
+            "timestamp": "2025-01-20 10:07"
+        },
+        {
+            "id": 13,
+            "sender": "user",
+            "text": "Ok, ¿qué necesito para empezar?",
+            "timestamp": "2025-01-20 10:08"
+        },
+        {
+            "id": 14,
+            "sender": "vi",
+            "text": "Solo tu nombre, correo y el país donde tienes la cita. Luego definimos tus preferencias de fecha y yo empiezo el monitoreo *24/7* por ti 💪",
+            "timestamp": "2025-01-20 10:08"
+        },
+        {
+            "id": 15,
+            "sender": "user",
+            "text": "Listo Vi, comencemos 🟣",
+            "timestamp": "2025-01-20 10:09"
+        },
+        {
+            "id": 16,
+            "sender": "vi",
+            "text": "Genial 😄 Envíame tu nombre completo y tu correo para iniciar.",
+            "timestamp": "2025-01-20 10:09"
+        }
+    ]
+}

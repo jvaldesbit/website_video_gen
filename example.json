@@ -1,0 +1,41 @@
+{
+    "device": "iphone15",
+    "theme": "whatsapp-light",
+    "conversation": [
+        {
+            "id": 1,
+            "sender": "user",
+            "text": "Hola, Vi 👋 ¿me ayudas con mi cita?",
+            "timestamp": "2025-01-15 08:32"
+        },
+        {
+            "id": 2,
+            "sender": "vi",
+            "text": "¡Hola! Claro que sí 😊 Envíame tu correo y país.",
+            "timestamp": "2025-01-15 08:33"
+        },
+        {
+            "id": 3,
+            "sender": "user",
+            "image": "https://placehold.co/600x400",
+            "timestamp": "2025-01-15 08:34"
+        },
+        {
+            "id": 4,
+            "sender": "vi",
+            "text": "Perfecto. Esta es tu actualización 👉 https://visabot.com.co",
+            "timestamp": "2025-01-15 08:35"
+        },
+        {
+            "id": 5,
+            "sender": "user",
+            "text": "¡Genial! Muchas gracias.",
+            "timestamp": "2025-01-15 08:36"
+        }
+    ],
+    "settings": {
+        "autoplaySpeed": 1.0,
+        "showAvatar": true,
+        "showTicks": true
+    }
+}

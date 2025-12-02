@@ -1,0 +1,84 @@
+{
+    "device": "iphone15",
+    "theme": "whatsapp-dark",
+    "settings": {
+        "autoplaySpeed": 1.2,
+        "showAvatar": true,
+        "showTicks": false,
+        "borderColor": "#9333ea"
+    },
+    "conversation": [
+        {
+            "id": 1,
+            "sender": "user",
+            "text": "Hola, quiero recibir más información?",
+            "timestamp": "2025-01-20 11:00"
+        },
+        {
+            "id": 2,
+            "sender": "vi",
+            "text": "¡Hola! Soy *Vi* 😊\nTe ayudo a adelantar tu cita de visa americana de forma segura y sin pago anticipado.\nPara comenzar, ¿en qué *país* tienes tu cita?",
+            "timestamp": "2025-01-20 11:01"
+        },
+        {
+            "id": 3,
+            "sender": "user",
+            "text": "Colombia.",
+            "timestamp": "2025-01-20 11:01"
+        },
+        {
+            "id": 4,
+            "sender": "vi",
+            "text": "Perfecto 👍 Bogotá suele tener citas muy lejanas, pero puedo ayudarte a buscar una más pronta.\nAntes de continuar, ¿cuál es tu *nombre completo*?",
+            "timestamp": "2025-01-20 11:02"
+        },
+        {
+            "id": 5,
+            "sender": "user",
+            "text": "Andrés Gómez.",
+            "timestamp": "2025-01-20 11:02"
+        },
+        {
+            "id": 6,
+            "sender": "vi",
+            "text": "Gracias Andrés 😊\nAhora cuéntame, ¿cuál es tu *correo electrónico*? Ese será tu usuario para el portal de citas.",
+            "timestamp": "2025-01-20 11:03"
+        },
+        {
+            "id": 7,
+            "sender": "user",
+            "text": "andresgomez@gmail.com",
+            "timestamp": "2025-01-20 11:03"
+        },
+        {
+            "id": 8,
+            "sender": "vi",
+            "text": "Perfecto Andrés 🟣\nAhora, para entender tu caso: ¿la cita es solo para ti o para alguien más?",
+            "timestamp": "2025-01-20 11:04"
+        },
+        {
+            "id": 9,
+            "sender": "user",
+            "text": "Somos dos personas.",
+            "timestamp": "2025-01-20 11:04"
+        },
+        {
+            "id": 10,
+            "sender": "vi",
+            "text": "Listo, entonces sería una cita familiar 👨‍👩‍👧\nEl costo es:\n• Titular: *$600 COP por día adelantado*\n• Acompañante: *$300 COP por día*\n👉 Total por día para ustedes dos: *$900 COP*\n\nSolo pagas cuando adelantemos la cita.",
+            "timestamp": "2025-01-20 11:05"
+        },
+        {
+            "id": 11,
+            "sender": "user",
+            "text": "¿Y es rápido? Mi cita está muy lejos.",
+            "timestamp": "2025-01-20 11:05"
+        },
+        {
+            "id": 12,
+            "sender": "vi",
+            "text": "Sí 😊\nTenemos *98% de efectividad* y más de *2.500 citas adelantadas*.\nCuando la Embajada libera cupos, yo los detecto en *segundos* y hago la reserva.",
+            "timestamp": "2025-01-20 11:06"
+        }
+    ]
+}

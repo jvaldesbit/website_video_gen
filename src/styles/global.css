@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-slate-900 text-slate-100;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes aurora-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes aurora-wave {
+
+  0%,
+  100% {
+    inset: -15px;
+    filter: blur(20px);
+    opacity: 0.7;
+  }
+
+  50% {
+    inset: -25px;
+    filter: blur(35px);
+    opacity: 1;
+  }
+}
+
+.aurora-glow {
+  position: relative;
+}
+
+.aurora-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  z-index: -1;
+  background: conic-gradient(from 0deg, #9333ea, #00ff9d, #9333ea, #00ff9d, #9333ea);
+  border-radius: inherit;
+  animation: aurora-spin 10s linear infinite, aurora-wave 6s ease-in-out infinite;
+  filter: blur(25px);
+  opacity: 1;
+}
+
+.aurora-glow::after {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  z-index: -1;
+  background: conic-gradient(from 180deg, #9333ea, #00ff9d, #9333ea, #00ff9d, #9333ea);
+  border-radius: inherit;
+  animation: aurora-spin 10s linear infinite reverse, aurora-wave 6s ease-in-out infinite reverse;
+  filter: blur(25px);
+  opacity: 1;
+}

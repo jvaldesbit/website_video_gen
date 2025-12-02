@@ -1,0 +1,102 @@
+    {
+        "device": "iphone15",
+        "theme": "whatsapp-dark",
+        "settings": {
+            "autoplaySpeed": 1.2,
+            "showAvatar": true,
+            "showTicks": false,
+            "borderColor": "#9333ea"
+        },
+        "conversation": [
+            {
+                "id": 1,
+                "sender": "user",
+                "text": "Hola, quiero configurar mi bot personalizado.",
+                "timestamp": "2025-01-20 11:00"
+            },
+            {
+                "id": 2,
+                "sender": "vi",
+                "text": "¡Hola! 😊 Claro que sí. Vamos a crear tu bot personalizado.\n¿Cómo quieres que se llame tu bot?",
+                "timestamp": "2025-01-20 11:01"
+            },
+            {
+                "id": 3,
+                "sender": "user",
+                "text": "Ponle: Bot de Julian.",
+                "timestamp": "2025-01-20 11:01"
+            },
+            {
+                "id": 4,
+                "sender": "vi",
+                "text": "Perfecto 👍\nTu bot se llamará *Bot de Julian*.\n\nAhora necesito validar tu cuenta del sistema de citas.\nPor favor envíame el *usuario* y la *contraseña* para sincronizar tu bot.",
+                "timestamp": "2025-01-20 11:02"
+            },
+            {
+                "id": 5,
+                "sender": "user",
+                "text": "Usuario: julianbello@gmail.com\nContraseña: Julian2025*",
+                "timestamp": "2025-01-20 11:03"
+            },
+            {
+                "id": 6,
+                "sender": "vi",
+                "text": "Gracias Julian 🙌\nDame un momento mientras verifico tu información en el portal oficial…",
+                "timestamp": "2025-01-20 11:04"
+            },
+            {
+                "id": 7,
+                "sender": "vi",
+                "text": "Listo 🟣 He encontrado tu perfil.\n\n### **Información del aplicante:**\n• **Nombre:** Julian Bello\n• **Pasaporte:** AV567833\n• **Formulario DS-160:** AA097645990B\n\n### **Citas actuales:**\n• **Consulado:** 12 de diciembre del 2026\n• **CAS:** 2 de diciembre del 2026\n\nTodo coincide correctamente ✔️",
+                "timestamp": "2025-01-20 11:05"
+            },
+            {
+                "id": 8,
+                "sender": "vi",
+                "text": "Ahora cuéntame, ¿para qué fecha deseas adelantar tu cita?",
+                "timestamp": "2025-01-20 11:06"
+            },
+            {
+                "id": 9,
+                "sender": "user",
+                "text": "Quiero adelantarla para enero del 2026.",
+                "timestamp": "2025-01-20 11:06"
+            },
+            {
+                "id": 10,
+                "sender": "vi",
+                "text": "Perfecto, entonces tu objetivo es mover tu cita de:\n• *Diciembre 2026 ➝ Enero 2026*\n\nAntes de activar el bot, ¿hay alguna fecha que NO puedas asistir?",
+                "timestamp": "2025-01-20 11:07"
+            },
+            {
+                "id": 11,
+                "sender": "user",
+                "text": "Sí, no puedo el 12 de enero del 2026.",
+                "timestamp": "2025-01-20 11:07"
+            },
+            {
+                "id": 12,
+                "sender": "vi",
+                "text": "Anotado Julian 👍\n\n### **Preferencias configuradas:**\n• Buscar cita para 👉 *enero 2026*\n• Evitar la fecha ❌ *12 de enero 2026*\n\nCon esta información, *Bot de Julian* empezará a monitorear tu caso.",
+                "timestamp": "2025-01-20 11:08"
+            },
+            {
+                "id": 13,
+                "sender": "vi",
+                "text": "Tu bot trabajará *24/7* buscando un espacio que cumpla tus criterios.\nApenas encuentre una opción válida, la reservaré automáticamente y te enviaré la confirmación de tu nueva cita 💜",
+                "timestamp": "2025-01-20 11:09"
+            },
+            {
+                "id": 14,
+                "sender": "user",
+                "text": "Perfecto, activa el bot.",
+                "timestamp": "2025-01-20 11:09"
+            },
+            {
+                "id": 15,
+                "sender": "vi",
+                "text": "¡Listo Julian! 🎉\n*Bot de Julian* quedó oficialmente activado.\n\nComienzo ahora mismo tu monitoreo. Te mantendré informado.",
+                "timestamp": "2025-01-20 11:10"
+            }
+        ]
+    }
