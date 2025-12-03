@@ -7,6 +7,11 @@
         "showTicks": false,
         "borderColor": "#9333ea"
     },
+    "music": {
+        "type": "spotify",
+        "url": "spotify:track:1musbempyJAw5gfSKZHXP9",
+        "volume": 0.5
+    },
     "conversation": [
         {
             "id": 1,

@@ -37,5 +37,9 @@
         "autoplaySpeed": 1.0,
         "showAvatar": true,
         "showTicks": true
+    },
+    "music": {
+        "url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+        "volume": 0.5
     }
 }

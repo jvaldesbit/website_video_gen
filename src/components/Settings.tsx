@@ -1,7 +1,10 @@
 import { useState } from 'preact/hooks';
-import { loadConversation } from '../store/conversationStore';
+import { loadConversation, conversationConfig } from '../store/conversationStore';
 import type { ConversationConfig, DeviceType, ThemeType } from '../types/conversation';
-import { IoCodeSlash, IoCheckmark, IoDocumentText, IoPhonePortrait, IoTabletPortrait, IoDesktop, IoMoon, IoSunny } from 'react-icons/io5';
+import { IoCodeSlash, IoMoon, IoSunny, IoPhonePortrait, IoTabletPortrait, IoDesktop, IoLogoAndroid, IoLogoApple, IoDocumentText, IoCheckmark } from 'react-icons/io5';
+import { spotifyStore, logoutSpotify } from '../store/spotifyStore';
+import { redirectToAuthCodeFlow } from '../utils/spotifyAuth';
+import { useStore } from '@nanostores/preact';
 
 const PRESETS = [
     {
@@ -216,6 +219,17 @@ export default function Settings() {
         loadConversation(config);
     };
 
+    const spotifyState = useStore(spotifyStore);
+    const isConnected = spotifyState.isConnected;
+
+    const handleSpotifyLogin = () => {
+        window.location.href = '/api/spotify/login';
+    };
+
+    const handleSpotifyLogout = () => {
+        logoutSpotify();
+    };
+
     return (
         <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between mb-2">
@@ -298,6 +312,27 @@ export default function Settings() {
                         </div>
                     )}
                 </div>
+            </div>
+            <div className="space-y-4">
+                <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Spotify</h3>
+                {!isConnected ? (
+                    <button
+                        onClick={handleSpotifyLogin}
+                        className="w-full py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                    >
+                        Connect Spotify
+                    </button>
+                ) : (
+                    <div className="flex items-center justify-between bg-slate-800 p-3 rounded-lg">
+                        <span className="text-sm text-green-400 font-medium">Connected</span>
+                        <button
+                            onClick={handleSpotifyLogout}
+                            className="text-xs text-slate-400 hover:text-white"
+                        >
+                            Disconnect
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

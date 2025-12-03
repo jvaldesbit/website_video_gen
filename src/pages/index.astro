@@ -1,50 +1,98 @@
 ---
-import DeviceFrame from '../components/DeviceFrame';
-import ChatView from '../components/ChatView';
-import Controls from '../components/Controls';
-import Settings from '../components/Settings';
-import '../styles/global.css';
+import DeviceFrame from "../components/DeviceFrame";
+import ChatView from "../components/ChatView";
+import Controls from "../components/Controls";
+import Settings from "../components/Settings";
+import AudioPlayer from "../components/AudioPlayer";
+import SpotifyPlayer from "../components/SpotifyPlayer";
+import "../styles/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>WhatsApp Video Generator</title>
-	</head>
-	<body class="h-screen w-screen overflow-hidden flex flex-col">
-    <!-- Header -->
-    <header class="h-14 border-b border-slate-800 bg-slate-950 flex items-center px-6 shrink-0 z-50">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">V</div>
-        <h1 class="text-lg font-semibold tracking-tight text-white">VideoGen <span class="text-slate-500 font-normal">Studio</span></h1>
-      </div>
-    </header>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>WhatsApp Video Generator</title>
+    </head>
+    <body class="h-screen w-screen overflow-hidden flex flex-col">
+        <!-- Header -->
+        <header
+            class="h-14 border-b border-slate-800 bg-slate-950 flex items-center px-6 shrink-0 z-50"
+        >
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-lg"
+                >
+                    V
+                </div>
+                <h1 class="text-lg font-semibold tracking-tight text-white">
+                    VideoGen <span class="text-slate-500 font-normal"
+                        >Studio</span
+                    >
+                </h1>
+            </div>
+        </header>
 
-    <!-- Main Content -->
-		<main class="flex-1 flex overflow-hidden">
-      <!-- Canvas Area -->
-			<div class="flex-1 bg-slate-900 relative flex items-center justify-center overflow-hidden p-8">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-slate-900 to-slate-950 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20 pointer-events-none"></div>
-        
-        <!-- Device Container -->
-				<DeviceFrame client:only="preact">
-					<ChatView client:only="preact" />
-				</DeviceFrame>
-			</div>
+        <!-- Main Content -->
+        <main class="flex-1 flex overflow-hidden">
+            <!-- Canvas Area -->
+            <div
+                class="flex-1 bg-slate-900 relative flex items-center justify-center overflow-hidden p-8"
+            >
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/40 via-slate-900 to-slate-950 pointer-events-none"
+                >
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-purple-900/20 pointer-events-none"
+                >
+                </div>
 
-      <!-- Sidebar -->
-			<aside class="w-96 bg-slate-950 border-l border-slate-800 flex flex-col shrink-0 z-40">
-        <div class="p-6 border-b border-slate-800">
-				  <Controls client:only="preact" />
-        </div>
-        <div class="flex-1 overflow-y-auto p-6">
-				  <Settings client:only="preact" />
-        </div>
-			</aside>
-		</main>
-	</body>
+                <!-- Device Container -->
+                <DeviceFrame client:only="preact">
+                    <ChatView client:only="preact" />
+                </DeviceFrame>
+            </div>
+
+            <script>
+                import { updateSpotifyStore } from "../store/spotifyStore";
+                import { loadSpotifyTokenFromStorage } from "../store/spotifyStore";
+
+                // Check for tokens in URL (returned from server callback)
+                const params = new URLSearchParams(window.location.search);
+                const accessToken = params.get("access_token");
+                const refreshToken = params.get("refresh_token");
+                const expiresAt = params.get("expires_at");
+
+                if (accessToken && refreshToken && expiresAt) {
+                    updateSpotifyStore(
+                        accessToken,
+                        refreshToken,
+                        parseInt(expiresAt),
+                    );
+                    // Clear URL
+                    window.history.replaceState({}, document.title, "/");
+                } else {
+                    // Load from storage
+                    loadSpotifyTokenFromStorage();
+                }
+            </script>
+
+            <!-- Sidebar -->
+            <aside
+                class="w-96 bg-slate-950 border-l border-slate-800 flex flex-col shrink-0 z-40"
+            >
+                <div class="p-6 border-b border-slate-800">
+                    <Controls client:only="preact" />
+                    <AudioPlayer client:only="preact" />
+                    <SpotifyPlayer client:only="preact" />
+                </div>
+                <div class="flex-1 overflow-y-auto p-6">
+                    <Settings client:only="preact" />
+                </div>
+            </aside>
+        </main>
+    </body>
 </html>

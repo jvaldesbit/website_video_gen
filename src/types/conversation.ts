@@ -22,4 +22,9 @@ export interface ConversationConfig {
   theme: ThemeType;
   conversation: Message[];
   settings: Settings;
+  music?: {
+    type: 'file' | 'spotify';
+    url: string;
+    volume?: number;
+  };
 }
